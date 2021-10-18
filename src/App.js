@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import Logout from './components/Logout/logout';
 import NotFound from './components/NotFound/NotFound';
 import Appointment from './components/Appointment/Appointment';
+import AppointmentForm from './components/Appointment/AppointmentForm/AppointmentForm';
 
 import {
   BrowserRouter as Router,
@@ -15,42 +16,51 @@ import {
   Route,
   // Link
 } from "react-router-dom";
+import ServiceDetails from './components/Home/Services/ServiceDetails/ServiceDetails';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Header></Header>
-     
-      <Footer></Footer> */}
+
         <Router>
           <Header></Header>
+
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home></Home>
             </Route>
 
-            <Route path="/home">
+            <Route exact path="/home">
               <Home></Home>
             </Route>
 
-            <Route path="/appointment">
-              <Appointment></Appointment>
+            <Route exact path="/appointment">
+              <AppointmentForm></AppointmentForm>
             </Route>
 
-            <Route path="/services">
+            <Route exact path="/appointment-form">
+              <AppointmentForm></AppointmentForm>
+            </Route>
+
+            <Route exact path="/services">
               <Services></Services>
             </Route>
 
-            <Route path="/specialities">
+            {/* dynamic route */}
+            <Route exact path="/services/:serviceId">
+              <ServiceDetails></ServiceDetails>
+            </Route>
+
+            <Route exact path="/specialities">
               <Specialities></Specialities>
             </Route>
 
-            <Route path="/login">
+            <Route exact path="/login">
               <Login></Login>
             </Route>
 
-            <Route path="logout">
+            <Route exact path="/logout">
               <Logout></Logout>
             </Route>
 
@@ -58,6 +68,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+
           <Footer></Footer>
         </Router>
     </div>

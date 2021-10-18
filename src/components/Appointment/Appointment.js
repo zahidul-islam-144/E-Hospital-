@@ -13,7 +13,7 @@ const Appointment = () => {
             </div>
 
             <div className="p-2">
-                <Link to="/appointment"> 
+                <Link to="/appointment-form"> 
                     <Button variant="light" size="lg">Make an appointment?</Button>
                 </Link>
             </div>

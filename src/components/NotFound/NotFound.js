@@ -1,10 +1,10 @@
 import React from 'react';
-import './NotFound.css'
-;
+import './NotFound.css';
+
 const NotFound = () => {
     return (
         <div>
-            this is not found page ....
+           <h1>page not fund 404... </h1>
         </div>
     );
 };
