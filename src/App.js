@@ -17,60 +17,70 @@ import {
   // Link
 } from "react-router-dom";
 import ServiceDetails from './components/Home/Services/ServiceDetails/ServiceDetails';
+import Register from './components/Register/Register';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
     <div className="App">
 
-        <Router>
-          <Header></Header>
+        <AuthProvider>
+          <Router>
+            <Header></Header>
 
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
 
-            <Route exact path="/home">
-              <Home></Home>
-            </Route>
+              <Route  path="/home">
+                <Home></Home>
+              </Route>
 
-            <Route exact path="/appointment">
-              <AppointmentForm></AppointmentForm>
-            </Route>
+              <PrivateRoute  path="/appointment">
+                <AppointmentForm></AppointmentForm>
+              </PrivateRoute>
 
-            <Route exact path="/appointment-form">
-              <AppointmentForm></AppointmentForm>
-            </Route>
+              <PrivateRoute path="/appointment-form">
+                <AppointmentForm></AppointmentForm>
+              </PrivateRoute>
 
-            <Route exact path="/services">
-              <Services></Services>
-            </Route>
+              <Route path="/services">
+                <Services></Services>
+              </Route>
 
-            {/* dynamic route */}
-            <Route exact path="/services/:serviceId">
-              <ServiceDetails></ServiceDetails>
-            </Route>
+              {/* dynamic route */}
+              <Route path="/services/:serviceId">
+                <ServiceDetails></ServiceDetails>
+              </Route>
 
-            <Route exact path="/specialities">
-              <Specialities></Specialities>
-            </Route>
+              <Route path="/specialities">
+                <Specialities></Specialities>
+              </Route>
 
-            <Route exact path="/login">
-              <Login></Login>
-            </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
 
-            <Route exact path="/logout">
-              <Logout></Logout>
-            </Route>
+              <Route path="/logout">
+                {/* <Logout></Logout> */}
+                <Home></Home>
+              </Route>
 
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>
-          </Switch>
+              <Route  path="/register">
+                <Register></Register>
+              </Route>
 
-          <Footer></Footer>
-        </Router>
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>
+            </Switch>
+
+            <Footer></Footer>
+          </Router>
+        </AuthProvider>
     </div>
   );
 }
