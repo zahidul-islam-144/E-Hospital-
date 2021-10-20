@@ -6,7 +6,7 @@
 2. You can find in our speciality to make appoinment to experienced doctor. 
 3. You can take so many services provided by hospital.
 
-
+## Note : Validation is not done and Redirect is not done after login & registration 
 
 ## Functionality used: 
 1. React Context API
