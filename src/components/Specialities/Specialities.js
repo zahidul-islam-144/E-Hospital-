@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import { Card, Button } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
 import SingleSpecialities from './SingleSpecialities/SingleSpecialities';
 import './Specialities.css';
+
 
 const Specialities = () => {
 
     const [specialities, setSpecialities] = useState([])
+
     useEffect( () => {
         fetch("https://mocki.io/v1/8ba74376-6984-4a6c-ad6c-f8a61451d102")
         .then(res => res.json())

@@ -1,4 +1,4 @@
-const services = [
+const servicesData = [
     {
         id : "s1",
         img: 'https://i.ibb.co/VWKsz4Z/service1.jpg',
@@ -56,3 +56,4 @@ const services = [
         
     }
 ]
+

@@ -56,3 +56,4 @@ const SpecialityData = [
         mbbs_from: "USA"
     }
 ]
+

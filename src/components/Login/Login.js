@@ -45,8 +45,6 @@ const Login = () => {
         }catch{
             setError("Password or Email is correct !");
         }
-
-
     }
 
     return (
