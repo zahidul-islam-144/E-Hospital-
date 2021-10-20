@@ -11,14 +11,15 @@ const Service = (props) => {
     
             <Card>
                 <Image  src={img} className="hover" style={{ opacity: ".9", width:"100%", height:"100%"}} />
-                    <Card.ImgOverlay>
-                        <Card.Title className="text-black text-center mt-2 hover">
+                    {/* <Card.ImgOverlay>
+                        <Card.Title className="text-black text-center mt-5 hover">
                             {service_name}
                         </Card.Title>
-                    </Card.ImgOverlay>
+                    </Card.ImgOverlay> */}
+                   <h5 className="text-center mt-1">{service_name}</h5>
             </Card>
-            <Link to={`/services/${id}`}>
-                        <Button style={{cursor:"pointer"}}>Details</Button>
+            <Link to={`/services/${id}`}  style={{cursor:"pointer"}}>
+                         Details
             </Link>
         </div>
     );

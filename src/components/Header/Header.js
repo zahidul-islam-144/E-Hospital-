@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import './Header.css';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
@@ -9,25 +10,32 @@ const Header = () => {
         <>
             <Navbar bg="primary" variant="dark" sticky="top">
                 <Container>
-                    <Navbar.Brand href="#home">E-Hospital</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Link to="/home" className="text-white">Home/</Link>
-                        <Link to="/services" className="text-white">Services/</Link>
-
-                        <Link to="/specialities" className="text-white">Specialities/</Link>
-                        <Link to="/appointment" className="text-white">Appointment/</Link>
+                    <Nav className="mx-auto">
+                    <h2>E- Hospital</h2>
+                      <ul className="menu-list">
+                            <Link to="/home">
+                                <li className="items">Home</li>
+                            </Link>
+                            <Link to="/services">
+                                <li className="items">Services</li>
+                            </Link>
+                            <Link to="/specialities">
+                                <li className="items">Specialities</li>
+                            </Link>
+                            <Link to="/appointment">
+                                <li className="items">Appointment</li>
+                            </Link>
+                            <Link to="/login">
+                                <li className="items">Login</li>
+                            </Link>
+                            {/* logout */}
+                            {user?.email && 
+                            <Button  onClick={logout} className="text-white d-block">
+                                Logout
+                            </Button>}
+                            <span className="ms-3">{user.displayName}</span>
+                      </ul>
                         
-                        <Link to="/login" className="text-white">Login/</Link>
-                        {user?.email && <Link  onClick={logout} className="text-white">Log out</Link>}
-                        <span className="ms-3">{user.displayName}</span>
-                        
-{/*                         
-                        <Nav.Link href="#home" >Home</Nav.Link>
-                        <Nav.Link href="#appointment">Appointment</Nav.Link>
-                        <Nav.Link href="#services">Services</Nav.Link>
-                        <Nav.Link href="#specialities">Specialities</Nav.Link>
-                        <Nav.Link href="#Login">Login</Nav.Link>
-                        <Nav.Link href="#Logout">Log out</Nav.Link> */}
                     </Nav>
                 </Container>
             </Navbar>

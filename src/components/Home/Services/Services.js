@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Image } from 'react-bootstrap';
 import Service from './Service/Service';
 import './Services.css'
 ;
@@ -15,7 +14,7 @@ const Services = () => {
         <div id="services">
             <h1 className="text-center mt-5 mb-4">Our <span className="text-blue-800">Services</span></h1>
             
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-4 gap-4 container">
                     {
                         services.map( service =><Service
                             service = {service}

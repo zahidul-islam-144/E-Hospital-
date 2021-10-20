@@ -1,0 +1,16 @@
+.main{
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    grid-column-gap: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.img-block{
+    height: 260px;
+    width: 300px;
+}
+.content-block{
+    height: 260px;
+    width: 100%;
+}

@@ -1,0 +1,18 @@
+.speciality-container{
+    display: flex;
+    justify-content: space-around;
+}
+.image {
+    margin: 5px;
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+    /* border-radius: 50%; */
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: 1px solid black;
+  }
+/* .thumb {
+    width: 100%;
+    height: 100%;
+  } */
