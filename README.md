@@ -6,7 +6,9 @@
 2. You can find in our speciality to make appoinment to experienced doctor. 
 3. You can take so many services provided by hospital.
 
-## Note : Validation is not done and Redirect is not done after login & registration 
+## Note : 
+1. Validation is not done and Redirect is not done after login & registration.
+2. This project runs perfectly in local server but in firebase server some pages or elements is not showing when I did empty cache hard relod. 
 
 ## Functionality used: 
 1. React Context API
