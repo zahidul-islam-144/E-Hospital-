@@ -8,7 +8,7 @@
 
 ## Note : 
 1. Validation is not done and Redirect is not done after login & registration.
-2. This project runs perfectly in local server but in firebase server some pages or elements is not showing when I did empty cache hard relod. 
+2. This project runs perfectly in local server but in firebase server some pages or elements is not showing when I did empty cache hard relod in browser devloper mood. 
 
 ## Functionality used: 
 1. React Context API
