@@ -25,15 +25,20 @@ const Header = () => {
                             <Link to="/appointment">
                                 <li className="items">Appointment</li>
                             </Link>
-                            <Link to="/login">
+                            {!user?.email &&
+                                <Link to="/login">
                                 <li className="items">Login</li>
-                            </Link>
+                                </Link>
+                            }
+
                             {/* logout */}
                             {user?.email && 
                             <Button  onClick={logout} className="text-white d-block">
                                 Logout
                             </Button>}
-                            <span className="ms-3">{user.displayName}</span>
+                            <span className="ms-3">
+                                {user.displayName? user.displayName : user.email}
+                            </span>
                       </ul>
                         
                     </Nav>

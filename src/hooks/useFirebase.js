@@ -42,9 +42,11 @@ const useFirebase = () => {
         console.log(email,password);
     }
     const login = (email, password) => {
+        console.log(email,password);
         signInWithEmailAndPassword(auth, email, password)
         .then(result => {
             const user = result.user;
+            setUser(user);
             console.log(user);
         })
     }
@@ -63,7 +65,7 @@ const useFirebase = () => {
                 setUser(user);
             }
         })
-    }, [user]);
+    }, []);
 
 
     return{

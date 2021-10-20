@@ -27,9 +27,7 @@ const Register = () => {
             setError('Password Must be at least 6 characters long.')
             return;
         }
-        
         signup(email, password);
-
     }
 
     return (
