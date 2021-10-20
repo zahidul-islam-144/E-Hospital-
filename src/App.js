@@ -6,20 +6,19 @@ import Services from './components/Home/Services/Services';
 import Specialities from './components/Specialities/Specialities';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
-// import Appointment from './components/Appointment/Appointment';
 import AppointmentForm from './components/Appointment/AppointmentForm/AppointmentForm';
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  // Link
-} from "react-router-dom";
 import ServiceDetails from './components/Home/Services/ServiceDetails/ServiceDetails';
 import Register from './components/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import SingleSpecialities from './components/Specialities/SingleSpecialities/SingleSpecialities';
+import './App.css';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 
 function App() {

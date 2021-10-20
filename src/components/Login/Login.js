@@ -51,7 +51,7 @@ const Login = () => {
 
     return (
 
-        <div className="max-w-sm  min-h-full mx-auto border-1 p-2 m-5 shadow-md">
+        <div className="max-w-sm  mx-auto border-1 p-2 m-5 shadow-md min-h-full">
            <h1 className="text-center text-blue-500">Please, Login </h1>
            <Form>
            {error && <Alert variant="danger">{error}</Alert>}
