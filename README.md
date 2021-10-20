@@ -8,7 +8,7 @@
 
 
 
-## Feature: 
+## Functionality used: 
 1. React Context API
 2. Custom Hooks
 3. React Hooks
